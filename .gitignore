@@ -1,0 +1,5 @@
+# Python Ship-Weather
+.idea/
+__pycache__/
+venv/
+notes.txt
