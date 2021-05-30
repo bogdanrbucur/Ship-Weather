@@ -59,5 +59,6 @@ def index():
     # return "<h1>Some header here</h1>"  # for HTML
 
 
+
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    app.run(host="127.0.0.1", port=8080, debug=False)
