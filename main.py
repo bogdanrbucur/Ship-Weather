@@ -45,8 +45,8 @@ def windy_link():
     # print(lat)
     # print(long)
 
-    # Windy URL arguments: lat/long/info_type(meteogram, waves, etc)?lat,long,zoom_level
-    weather_link = "https://www.windy.com/" + lat + "/" + long + "/meteogram?" + lat + "," + long + ",6"
+    # Windy URL arguments: lat/long/info_type(meteogram, waves, etc)?lat,long,zoom_level,i:pressure(for isobars)
+    weather_link = "https://www.windy.com/" + lat + "/" + long + "/meteogram?" + lat + "," + long + ",6,i:pressure"
 
     # webbrowser.open(weather_link, new=0, autoraise=True)  # legacy code for .exe
 
