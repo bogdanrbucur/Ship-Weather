@@ -13,10 +13,12 @@
 .git
 .gitignore
 readme.md
-notes.txt
 LICENSE
 # Python pycache:
 __pycache__/
 venv/
+.idea/
 # Ignored by the build system
 /setup.cfg
+#others
+notes.txt
