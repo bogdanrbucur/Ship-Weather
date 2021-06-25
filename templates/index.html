@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href='/static/main.css' />
-    <link rel="icon" href="/static/favicon.png" />
-    <meta charset="UTF-8">
-    <title>Ship Weather</title>
+<link rel="stylesheet" href='/static/main.css' />
+<link rel="icon" href="/static/favicon.png" />
+<meta charset="UTF-8">
+<title>Ship Weather</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+</style>
 </head>
 <body>
-    <h1>Ship weather. Powered by Windy.</h1>
-    <br>
-    <h2>See the weather at the vessel's current position</h2>
-    <br>
-<p>
-    <form action="/ship1" method="post">
-        <button type="submit" value="Bro Nibe">BRO NIBE</button>
+<div class="row">
+    <div class="col-12">
+    <h1>Ship Weather powered by Windy</h1>
+</div>
+    </div>
+<div class="row">
+    <div class="col-12">
+    <h2>See the weather for your vessel</h2>
+</div>
+    </div>
+<div class="row">
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Bro Nibe" name="button">BRO NIBE</button>
     </form>
-</p>
+</div>
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Maersk Maru" name="button">MAERSK MARU</button>
+    </form>
+</div>
+</div>
 
-<p>
-    <form action="/ship2" method="post">
-        <button type="submit" value="Bro Nissum">BRO NISSUM</button>
+<div class="row">
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Bro Nissum" name="button">BRO NISSUM</button>
     </form>
-</p>
+</div>
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Maersk Cebu" name="button">MAERSK CEBU</button>
+    </form>
+</div>
+</div>
 
-<p>
-    <form action="/ship3" method="post">
-        <button type="submit" value="Maersk Maru">MAERSK MARU</button>
+<div class="row">
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Bro Agnes" name="button">BRO AGNES</button>
     </form>
-</p>
+</div>
+<div class="col-3">
+    <form action="/ship" method="post">
+        <button type="submit" value="Maersk Kaya" name="button">MAERSK KAYA</button>
+    </form>
+</div>
+</div>
 
 </body>
 <div class="footer">

@@ -1,5 +1,5 @@
 from urllib.request import Request, urlopen
-from flask import Flask, redirect, render_template
+from flask import Flask, redirect, render_template, request
 
 # import webbrowser  # legacy code for .exe
 
@@ -62,25 +62,33 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/ship1', methods=['GET', 'POST'])  # Bro Nibe
-def ship1(x=None, y=None):
-    page = 'https://www.vesselfinder.com/vessels/BRO-NIBE-IMO-9322700-MMSI-220495000'
-    return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
-    pass
+@app.route('/ship', methods=['GET', 'POST'])  # Bro Nibe
+def ship():
+    if 'Bro Nibe' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/BRO-NIBE-IMO-9322700-MMSI-220495000'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
+    elif 'Bro Nissum' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/BRO-NISSUM-IMO-9340623-MMSI-220504000'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
+    elif 'Bro Agnes' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/BRO-AGNES-IMO-9348302-MMSI-564057000'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
+    elif 'Maersk Maru' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/MAERSK-MARU-IMO-9581447-MMSI-563087300'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
+    elif 'Maersk Cebu' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/MAERSK-CEBU-IMO-9786176-MMSI-219393000'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
+    elif 'Maersk Kaya' in request.form["button"]:
+        page = 'https://www.vesselfinder.com/vessels/MAERSK-KAYA-IMO-9431288-MMSI-566030000'
+        return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
+        pass
 
-
-@app.route('/ship2', methods=['GET', 'POST'])  # Bro Nissum
-def ship2(x=None, y=None):
-    page = 'https://www.vesselfinder.com/vessels/BRO-NISSUM-IMO-9340623-MMSI-220504000'
-    return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
-    pass
-
-
-@app.route('/ship3', methods=['GET', 'POST'])  # Maersk Maru
-def ship3(x=None, y=None):
-    page = 'https://www.vesselfinder.com/vessels/MAERSK-MARU-IMO-9581447-MMSI-563087300'
-    return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
-    pass
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=False)
