@@ -64,7 +64,8 @@ def index():
 
 @app.route('/ship', methods=['GET', 'POST'])  # Bro Nibe
 def ship():
-    if 'Bro Nibe' in request.form["button"]:
+    ship_name = request.form["button"]
+    if 'Bro Nibe' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/BRO-NIBE-IMO-9322700-MMSI-220495000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
@@ -91,4 +92,4 @@ def ship():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=False)
+    app.run(host="127.0.0.1", port=8080, debug=True)
