@@ -62,30 +62,30 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/ship', methods=['GET', 'POST'])  # Bro Nibe
+@app.route('/ship', methods=['GET', 'POST'])  # Reads the 'value' of the button press which contains the ship name
 def ship():
     ship_name = request.form["button"]
     if 'Bro Nibe' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/BRO-NIBE-IMO-9322700-MMSI-220495000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
-    elif 'Bro Nissum' in request.form["button"]:
+    elif 'Bro Nissum' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/BRO-NISSUM-IMO-9340623-MMSI-220504000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
-    elif 'Bro Agnes' in request.form["button"]:
+    elif 'Bro Agnes' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/BRO-AGNES-IMO-9348302-MMSI-564057000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
-    elif 'Maersk Maru' in request.form["button"]:
+    elif 'Maersk Maru' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/MAERSK-MARU-IMO-9581447-MMSI-563087300'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
-    elif 'Maersk Cebu' in request.form["button"]:
+    elif 'Maersk Cebu' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/MAERSK-CEBU-IMO-9786176-MMSI-219393000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
-    elif 'Maersk Kaya' in request.form["button"]:
+    elif 'Maersk Kaya' in ship_name:
         page = 'https://www.vesselfinder.com/vessels/MAERSK-KAYA-IMO-9431288-MMSI-566030000'
         return redirect(windy_link(page))  # immediately redirects to weather_link returned by windy_link()
         pass
