@@ -45,6 +45,7 @@ h4 {
 .btn:hover {
 	background-color: #606060;  /* APM Blue */
 	color: dddddd;
+    font-weight: 500;
 }
 
 .btn-primary:active{
