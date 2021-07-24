@@ -11,3 +11,5 @@ The  page uses [Bootstrap](https://github.com/twbs/bootstrap) for reactive desig
 At its core it is a function that scrapes vesselfinder.com for the vessel's coordinates, formats them and contructs a URL to Windy.com using the coordinates as URL parameters. [Flask](https://github.com/pallets/flask) is used to turn the function into a web app.
 
 Update: added [Docker](https://github.com/docker) files to migrate the app as a container on my Raspberry Pi. Container available on [Docker Hub](https://hub.docker.com/repository/docker/bbr91/shipweather).
+
+Turns out containers don't run cross-architecture so I had to make another container on my Raspbery Pi to run on ARM64. Also available on [Docker Hub](https://hub.docker.com/repository/docker/bbr91/shipweather_arm).
