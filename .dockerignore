@@ -23,4 +23,7 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
+**/venv
+**/.idea
+**/notes.txt
 README.md
