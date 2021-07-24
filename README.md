@@ -9,3 +9,5 @@ In my implementation the app is deployed using Google Cloud Services and changin
 The  page uses [Bootstrap](https://github.com/twbs/bootstrap) for reactive design and should look fine on any screen size. I use a custom.css for customization. The color palette is also dark mode friendly for browsers that support it.
 
 At its core it is a function that scrapes vesselfinder.com for the vessel's coordinates, formats them and contructs a URL to Windy.com using the coordinates as URL parameters. [Flask](https://github.com/pallets/flask) is used to turn the function into a web app.
+
+Update: added [Docker](https://github.com/docker) files to migrate the app as a container on my Raspberry Pi. Container available on [Docker Hub](https://hub.docker.com/repository/docker/bbr91/shipweather).
