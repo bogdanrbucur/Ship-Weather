@@ -14,4 +14,4 @@ At its core it is a function that scrapes vesselfinder.com for the vessel's coor
 
 26/07/2021: Turns out containers don't run cross-architecture so I had to build another container on my Raspbery Pi to run on ARM64 architecture. Also available on [Docker Hub](https://hub.docker.com/repository/docker/bbr91/shipweather_arm).
 
-29/07/2021: Integrated Google App Engine with Google Cloud Build for Continous Deployment upon master branch update. Added cloudbuild.yaml. This builds the app and deploys it as is, without containerzation.
+29/07/2021: Integrated Google App Engine with Google Cloud Build for Continous Deployment upon master branch update. Added `cloudbuild.yaml` to build the app and deploy it as is, without containerzation.
